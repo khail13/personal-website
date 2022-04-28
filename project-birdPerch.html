@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Khail's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Khail's personal website featuring his projects and personality">
+    <meta name="author" content="Khail Alibhai">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="shortcut icon" href="img/logo.png" />
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8V069PDR1K"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-8V069PDR1K');
+	</script>
+	<style>
+		.intro h1:before {
+			content: 'KHAIL';
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Menu</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li><a href="index.html#about">About</a></li>
+						<li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#photos">Photos</a></li>
+						<li><a href="index.html#contact">Contact</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1 style="padding: 20px;">3D Printed Bird Perch</h1>
+        
+        <h2>Purpose</h2>
+        <p>My two budgies; Olive and Jules, love their toys but struggle to hold them with their beaks and always drop them. To solve this problem, I took upon the challenge to design a safe, secure, and effective perch for them to hangout and play with their toys without having to lift them up.</p>
+
+        <model-viewer src="img/shelfFrame.glb" camera-controls auto-rotate loading="eager" style="display: block;margin-left: auto;margin-right: auto;width: 100%;">
+        </model-viewer>
+
+        <h2>Design</h2>
+        <p>The perch was intended to be fixed in the back corner of the bird cage. This spot in the cage had horizontal bars on one face and vertical bars on the other. This posed a unique challenge that was best suited for a 3D printed custom solution.<br><br>
+            My perch was modeled in SolidWorks with safety as its top priority. To ensure safe design, a fillet was applied to all of the edges to remove sharp points. To validate the effectiveness of my design, I conducted a Static Study using SOLIDWORKS Simulation tools. PLA (polylactic acid) was the material of filament that I had chosen to print with, however, this material was not present in the SOLIDWORKS materials library which prompted me to define its properties myself. The simulation process led to design adjustments and after a cycle of numerous design iterations, I was confident that the perch would meet its goals.
+        </p>
+
+        <img src="img/birdShelf1.jpg" style="margin-left: auto;margin-right: auto;margin-bottom: 20px;">
+
+        <h2>Takeaways</h2>
+        <ul>
+            <li>Accurately Simulating a 3D printed design is difficult as many parameters have an affect on the material's properties including the layer height, shell thickness, infill percentage, and infill shape.</li>
+            <li>3D printing and additive manufacturing is great for cost effective and rapid prototyping.</li>
+            <li>SOLIDWORKS Simulation has many powerful tools for virtual testing, optimization, and improving product quality. Useful tools that I became familiar with include Design Studies, Fatigue and Buckling Studies, and the Specialized Drop Test Simulation.</li>
+        </ul>
+
+        <img src="img/birdShelf2.GIF" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
+    </div>
+
+    <!-- Contact -->
+	<footer id="contact">
+		<div class="container units-row">
+            <div class="unit-50">
+                <p>Khail Alibhai - Updated April 2022</p>
+            </div>
+            <div class="unit-50">
+                <ul class="social list-flat right">
+                    <li><a href="mailto:kalibhai@sfu.ca"><i class="fa fa-send"></i></a></li>
+                    <li><a href="https://github.com/khail13"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/khail-alibhai/"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

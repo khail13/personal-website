@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Khail's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Khail's personal website featuring his projects and personality">
+    <meta name="author" content="Khail Alibhai">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="shortcut icon" href="img/logo.png" />
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8V069PDR1K"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-8V069PDR1K');
+	</script>
+	<style>
+		.intro h1:before {
+			content: 'KHAIL';
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Menu</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li><a href="#about">About</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#photos">Photos</a></li>
+						<li><a href="#contact">Contact</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- About Me -->
+	<div class="intro section">
+		<div class="container">
+			<p>Hi, I'm Khail</p>
+			<div class="units-row units-split wrap">
+				<div class="unit-20">
+					<img src="img/profilepic.JPG" alt="Avatar">
+				</div>
+				<div class="unit-80">
+					<h1>I am<br><span id="typed"></span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section second" id="about">
+		<div class="container">
+			<h1>About Me</h1>
+			<img src="img/about.jpg" alt="About Me" style="margin-bottom:30px;">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+
+	<!-- Projects -->
+	<div class="work section second" id="projects">
+		<div class="container">
+			<div class="clearfix">
+			<h1>My<br>Projects</h1>
+			<div class="responsive">
+				<div class="gallery">
+					<a href="project-birdPerch.html">
+						<img src="img/projectIcons/birdShelfIcon.jpg" alt="Cinque Terre" width="600" height="400">
+						<div class="desc">3D Printed Bird Perch</div>
+					</a>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+					<a href="project-suspension.html">
+						<img src="img/projectIcons/suspension.jpg" alt="Cinque Terre" width="600" height="400">
+					<div class="desc">Suspension Model</div>
+					</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div> 
+
+	<!-- Photo Gallery -->
+	<div class="container" id="photos">
+		<h1>Photo<br>Gallery</h1>
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 5</div>
+				<img src="img/gal1.JPG" style="width:100%">
+			</div>
+			
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 5</div>
+				<img src="img/gal2.JPEG" style="width:100%">
+			</div>
+			
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 5</div>
+				<img src="img/gal3.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 5</div>
+				<img src="img/gal4.JPEG" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 5</div>
+				<img src="img/gal5.JPEG" style="width:100%">
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			
+		</div>
+		<br>
+
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+		</div>
+	</div>
+
+	<!-- Quote -->
+	<div class="quote">
+		<div class="container text-centered">
+			<h1>Everything you can imagine is real.</h1>
+		</div>
+	</div>
+
+	<!-- Contact -->
+	<footer id="contact">
+		<div class="container">
+			<div class="units-row">
+			    <!-- <div class="unit-50">
+			    	<p>Contact</p>
+			    </div> -->
+			    <div class="unit-50">
+					<ul class="social list-flat">
+						<li><a href="mailto:kalibhai@sfu.ca"><i class="fa fa-envelope"></i></a></li>
+						<li><a href="https://github.com/khail13"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/khail-alibhai/"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+			    </div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typed.min.js"></script>
+    <script src="js/kube.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+		function newTyped(){}$(function(){$("#typed").typed({
+			strings: ["Ambitious", "Innovative", "Adventurous"],
+
+		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+    </script>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+</html>
