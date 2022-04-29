@@ -54,7 +54,26 @@
 
     <!-- Content -->
     <div class="container">
+        <h1 style="padding: 20px;">Vehicle Suspension Model</h1>
 
+        <h2>Purpose</h2>
+        <p>Every good road vehicle should have a sufficient suspension system to grant road holding ability, while still providing comfort when riding over bumps and holes in the road. To practice my system modeling and simulation skills, I chose to develop a vehicle suspension state-space model in MATLAB. With this model I optimized parameters and designed a closed loop, PID controlled suspension system to filter and quickly dissipate large oscillations.</p>
+        <img src="img/suspensionDiagram.png" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
+
+        <h2>Design</h2>
+        <p>To simplify the project, I approximated the suspension system using a half car model as seen in the diagram above. This model contains two linear moving masses, a linear and rotating mass, four springs, two frictional dampers, and two linear actuators that are used in the closed loop system. <br>
+        <br>Assuming approximated realistic values for the element parameters including the spring constants, damping coefficients, and masses, I developed an open loop model in MATLAB. With this model, I simulated the displacement response to a ten-centimeter step in the road, the step is first experienced by the front wheel and reaches the second wheel 0.2 seconds later. The distance between the vehicle and the front wheel is plotted below.</p>
+        <img src="img/suspensionPlot1.png" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
+        <p>This system experiences significant road disturbance and a very large settling time. To reduce this, I utilized a Proportional-Integral-Derivative (PID) control system. Using linear actuators to apply tensile or compressive forces based on feedback is common in modern suspension systems and it can have a substantial impact on reducing overshoot and shortening the settling time. After optimizing the controller by tuning the PID constants, the following closed loop simulation was conducted. This new system greatly improved the effectiveness of the suspension system.</p>
+        <img src="img/suspensionPlot2.png" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
+        
+        <h2>Takeaways</h2>
+        <ul>
+            <li>PID controllers are advantageous as they can act only on the error between the desired signal and the controlled signal. This means that no extra measurements of the internal states are needed which can result in less required sensors, signal conditioning, maintenance, and cost.</li>
+            <li>Manual PID tuning can be tedious and inefficient. Some better methods of determining optimal coefficients include using algorithmic auto tuning and heuristic PID tuning.</li>
+            <li>While this implementation of feedback control in a suspension system is fairly simple, the implementation of such a system in reality would be more complex due to the challenges of data acquisition. It would be tough to measure relative displacements between the wheels and frame. Instead, the relative velocity could be obtained by integrating the output of a mounted accelerometer.</li>
+        </ul>
+        <br>
     </div>
 
     <!-- Contact -->
