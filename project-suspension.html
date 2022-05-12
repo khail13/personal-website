@@ -1,95 +1,199 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Khail's Website</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Khail's personal website featuring his projects and personality">
-    <meta name="author" content="Khail Alibhai">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Khail's personal website featuring his projects and personality"
+    />
+    <meta name="author" content="Khail Alibhai" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/kube.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="shortcut icon" href="img/logo.png" />
-	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8V069PDR1K"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <link
+      href="http://fonts.googleapis.com/css?family=Playfair+Display+SC:700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8V069PDR1K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-		gtag('config', 'G-8V069PDR1K');
-	</script>
-	<style>
-		.intro h1:before {
-			content: 'KHAIL';
-		}
-	</style>
-</head>
+      gtag("config", "G-8V069PDR1K");
+    </script>
+    <style>
+      .intro h1:before {
+        content: "KHAIL";
+      }
+    </style>
+  </head>
 
-<body>
-
-	<!-- Navigation -->
-	<div class="main-nav">
-		<div class="container">
-			<header class="group top-nav">
-				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-				    <span class="logo">Menu</span>
-				</div>
-			    <nav id="navbar-1" class="navbar item-nav">
-				    <ul>
-				        <li><a href="index.html#about">About</a></li>
-						<li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="index.html#photos">Photos</a></li>
-						<li><a href="index.html#contact">Contact</a></li>
-				    </ul>
-				</nav>
-			</header>
-		</div>
-	</div>
+  <body>
+    <!-- Navigation -->
+    <div class="main-nav">
+      <div class="container">
+        <header class="group top-nav">
+          <div
+            class="navigation-toggle"
+            data-tools="navigation-toggle"
+            data-target="#navbar-1"
+          >
+            <span class="logo">Menu</span>
+          </div>
+          <nav id="navbar-1" class="navbar item-nav">
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#photos">Photos</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
 
     <!-- Content -->
     <div class="container">
-        <h1 style="padding: 20px;">Vehicle Suspension Model</h1>
+      <h1 style="padding: 20px">Vehicle Suspension Model</h1>
 
-        <h2>Purpose</h2>
-        <p>Every good road vehicle should have a sufficient suspension system to grant road holding ability, while still providing comfort when riding over bumps and holes in the road. To practice my system modeling and simulation skills, I chose to develop a vehicle suspension state-space model in MATLAB. With this model I optimized parameters and designed a closed loop, PID controlled suspension system to filter and quickly dissipate large oscillations.</p>
-        <img src="img/suspensionDiagram.png" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
+      <h2>Purpose</h2>
+      <p>
+        Every good road vehicle should have a sufficient suspension system to
+        grant road holding ability, while still providing comfort when riding
+        over bumps and holes in the road. To practice my system modeling and
+        simulation skills, I chose to develop a vehicle suspension state-space
+        model in MATLAB. With this model I optimized parameters and designed a
+        closed loop, PID controlled suspension system to filter and quickly
+        dissipate large oscillations.
+      </p>
+      <img
+        src="img/suspensionDiagram.png"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+          width: 100%;
+        "
+      />
 
-        <h2>Design</h2>
-        <p>To simplify the project, I approximated the suspension system using a half car model as seen in the diagram above. This model contains two linear moving masses, a linear and rotating mass, four springs, two frictional dampers, and two linear actuators that are used in the closed loop system. <br>
-        <br>Assuming approximated realistic values for the element parameters including the spring constants, damping coefficients, and masses, I developed an open loop model in MATLAB. With this model, I simulated the displacement response to a ten-centimeter step in the road, the step is first experienced by the front wheel and reaches the second wheel 0.2 seconds later. The distance between the vehicle and the front wheel is plotted below.</p>
-        <img src="img/suspensionPlot1.png" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
-        <p>This system experiences significant road disturbance and a very large settling time. To reduce this, I utilized a Proportional-Integral-Derivative (PID) control system. Using linear actuators to apply tensile or compressive forces based on feedback is common in modern suspension systems and it can have a substantial impact on reducing overshoot and shortening the settling time. After optimizing the controller by tuning the PID constants, the following closed loop simulation was conducted. This new system greatly improved the effectiveness of the suspension system.</p>
-        <img src="img/suspensionPlot2.png" style="margin-left: auto;margin-right: auto;margin-bottom: 20px; width: 100%">
-        
-        <h2>Takeaways</h2>
-        <ul>
-            <li>PID controllers are advantageous as they can act only on the error between the desired signal and the controlled signal. This means that no extra measurements of the internal states are needed which can result in less required sensors, signal conditioning, maintenance, and cost.</li>
-            <li>Manual PID tuning can be tedious and inefficient. Some better methods of determining optimal coefficients include using algorithmic auto tuning and heuristic PID tuning.</li>
-            <li>While this implementation of feedback control in a suspension system is fairly simple, the implementation of such a system in reality would be more complex due to the challenges of data acquisition. It would be tough to measure relative displacements between the wheels and frame. Instead, the relative velocity could be obtained by integrating the output of a mounted accelerometer.</li>
-        </ul>
-        <br>
+      <h2>Design</h2>
+      <p>
+        To simplify the project, I approximated the suspension system using a
+        half car model as seen in the diagram above. This model contains two
+        linear moving masses, a linear and rotating mass, four springs, two
+        frictional dampers, and two linear actuators that are used in the closed
+        loop system. <br />
+        <br />Assuming approximated realistic values for the element parameters
+        including the spring constants, damping coefficients, and masses, I
+        developed an open loop model in MATLAB. With this model, I simulated the
+        displacement response to a ten-centimeter step in the road, the step is
+        first experienced by the front wheel and reaches the second wheel 0.2
+        seconds later. The distance between the vehicle and the front wheel is
+        plotted below.
+      </p>
+      <img
+        src="img/suspensionPlot1.png"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+          width: 100%;
+        "
+      />
+      <p>
+        This system experiences significant road disturbance and a very large
+        settling time. To reduce this, I utilized a
+        Proportional-Integral-Derivative (PID) control system. Using linear
+        actuators to apply tensile or compressive forces based on feedback is
+        common in modern suspension systems and it can have a substantial impact
+        on reducing overshoot and shortening the settling time. After optimizing
+        the controller by tuning the PID constants, the following closed loop
+        simulation was conducted. This new system greatly improved the
+        effectiveness of the suspension system.
+      </p>
+      <img
+        src="img/suspensionPlot2.png"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+          width: 100%;
+        "
+      />
+
+      <h2>Takeaways</h2>
+      <ul>
+        <li>
+          PID controllers are advantageous as they can act only on the error
+          between the desired signal and the controlled signal. This means that
+          no extra measurements of the internal states are needed which can
+          result in less required sensors, signal conditioning, maintenance, and
+          cost.
+        </li>
+        <li>
+          Manual PID tuning can be tedious and inefficient. Some better methods
+          of determining optimal coefficients include using algorithmic auto
+          tuning and heuristic PID tuning.
+        </li>
+        <li>
+          While this implementation of feedback control in a suspension system
+          is fairly simple, the implementation of such a system in reality would
+          be more complex due to the challenges of data acquisition. It would be
+          tough to measure relative displacements between the wheels and frame.
+          Instead, the relative velocity could be obtained by integrating the
+          output of a mounted accelerometer.
+        </li>
+      </ul>
+      <br />
     </div>
 
     <!-- Contact -->
-	<footer id="contact">
-		<div class="container units-row">
-            <div class="unit-50">
-                <p>Khail Alibhai - Updated April 2022</p>
-            </div>
-            <div class="unit-50">
-                <ul class="social list-flat right">
-                    <li><a href="mailto:kalibhai@sfu.ca"><i class="fa fa-envelope"></i></a></li>
-                    <li><a href="https://github.com/khail13"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/khail-alibhai/"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-			</div>
-		</div>
-	</footer>
-</body>
+    <footer id="contact">
+      <div class="container units-row">
+        <div class="unit-50">
+          <p>Khail Alibhai - Updated April 2022</p>
+        </div>
+        <div class="unit-50">
+          <ul class="social list-flat right">
+            <li>
+              <a href="mailto:kalibhai@sfu.ca"
+                ><i class="fa fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/khail13"
+                ><i class="fa fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/khail-alibhai/"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

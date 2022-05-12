@@ -1,91 +1,161 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Khail's Website</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Khail's personal website featuring his projects and personality">
-    <meta name="author" content="Khail Alibhai">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Khail's personal website featuring his projects and personality"
+    />
+    <meta name="author" content="Khail Alibhai" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/kube.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="shortcut icon" href="img/logo.png" />
-	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8V069PDR1K"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <link
+      href="http://fonts.googleapis.com/css?family=Playfair+Display+SC:700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8V069PDR1K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-		gtag('config', 'G-8V069PDR1K');
-	</script>
-	<style>
-		.intro h1:before {
-			content: 'KHAIL';
-		}
-	</style>
-</head>
+      gtag("config", "G-8V069PDR1K");
+    </script>
+    <style>
+      .intro h1:before {
+        content: "KHAIL";
+      }
+    </style>
+  </head>
 
-<body>
-
-	<!-- Navigation -->
-	<div class="main-nav">
-		<div class="container">
-			<header class="group top-nav">
-				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-				    <span class="logo">Menu</span>
-				</div>
-			    <nav id="navbar-1" class="navbar item-nav">
-				    <ul>
-				        <li><a href="index.html#about">About</a></li>
-						<li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="index.html#photos">Photos</a></li>
-						<li><a href="index.html#contact">Contact</a></li>
-				    </ul>
-				</nav>
-			</header>
-		</div>
-	</div>
+  <body>
+    <!-- Navigation -->
+    <div class="main-nav">
+      <div class="container">
+        <header class="group top-nav">
+          <div
+            class="navigation-toggle"
+            data-tools="navigation-toggle"
+            data-target="#navbar-1"
+          >
+            <span class="logo">Menu</span>
+          </div>
+          <nav id="navbar-1" class="navbar item-nav">
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#photos">Photos</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
 
     <!-- Content -->
     <div class="container">
-        <h1 style="padding: 20px;">Roadsign Detection Neural Network</h1>
+      <h1 style="padding: 20px">Roadsign Detection Neural Network</h1>
 
-        <h2>Purpose</h2>
-		<p>One of the key challenges in the development of self-driving cars is the concept of computer vision. In particular, the ability of cars to interpret their environment from digital images and distinguish between different road signs such as stop signs and yield signs. To familiarize myself with the complexities of computer vision in self-driving cars, I took upon the challenge to develop an accurate and effective neural network to classify road signs based on images.</p>
+      <h2>Purpose</h2>
+      <p>
+        One of the key challenges in the development of self-driving cars is the
+        concept of computer vision. In particular, the ability of cars to
+        interpret their environment from digital images and distinguish between
+        different road signs such as stop signs and yield signs. To familiarize
+        myself with the complexities of computer vision in self-driving cars, I
+        took upon the challenge to develop an accurate and effective neural
+        network to classify road signs based on images.
+      </p>
 
-		<h2>Design</h2>
-		<p>Using Python and the TensorFlow and Open-CV libraries, I experimented with different structures and approaches. I trialed numerous combinations of varying convolutional layers, pooling layers, filters, pool sizes, hidden layers, and different dropout rates. The images used to train the neural network were fund from the German Traffic Sign Recognition Benchmark (GTSRB) dataset. This dataset consisted of thousands of images of 43 different road signs. 
-		<br><br>With maximizing model accuracy as the primary goal, the experimentation process led to the creation of a convolutional neural network with a Convolutional Layer to learn 32 filters using a 3x3 kernel and a ReLU activation function. This is followed by a Max-Pooling Layer with a 2x2 pool size and a ReLU activation function. The Units are then Flattened. To increase the accuracy, an added Hidden Layer with 128 Units and an additional ReLU activation function follow. The network is concluded by a Dropout with a rate of 0.3 to prevent overfitting and to promote generalization. The classification model results in an accuracy of approximately 96%.
-		</p>
+      <h2>Design</h2>
+      <p>
+        Using Python and the TensorFlow and Open-CV libraries, I experimented
+        with different structures and approaches. I trialed numerous
+        combinations of varying convolutional layers, pooling layers, filters,
+        pool sizes, hidden layers, and different dropout rates. The images used
+        to train the neural network were fund from the German Traffic Sign
+        Recognition Benchmark (GTSRB) dataset. This dataset consisted of
+        thousands of images of 43 different road signs. <br /><br />With
+        maximizing model accuracy as the primary goal, the experimentation
+        process led to the creation of a convolutional neural network with a
+        Convolutional Layer to learn 32 filters using a 3x3 kernel and a ReLU
+        activation function. This is followed by a Max-Pooling Layer with a 2x2
+        pool size and a ReLU activation function. The Units are then Flattened.
+        To increase the accuracy, an added Hidden Layer with 128 Units and an
+        additional ReLU activation function follow. The network is concluded by
+        a Dropout with a rate of 0.3 to prevent overfitting and to promote
+        generalization. The classification model results in an accuracy of
+        approximately 96%.
+      </p>
 
-		<h2>Takeaways</h2>
-		<ul>
-			<li>Computer Vision in self-driving cars is often achieved using neural networks and it relies on high resolution images. By breaking down these images into pixels and their RGB values, many weights need to be calculated. This causes an intense demand on computational power.</li>
-			<li>The dangers of modeling the training data too closely and failing to generalize to new data (overfitting) can be combatted by randomly removing some units during the learning phase (dropout). This prevents over-reliance on any one unit in the network. </li>
-			<li>While the concept of neural networks can be complex, TensorFlow and other python libraries make neural network implementation simple.</li>
-		</ul>
+      <h2>Takeaways</h2>
+      <ul>
+        <li>
+          Computer Vision in self-driving cars is often achieved using neural
+          networks and it relies on high resolution images. By breaking down
+          these images into pixels and their RGB values, many weights need to be
+          calculated. This causes an intense demand on computational power.
+        </li>
+        <li>
+          The dangers of modeling the training data too closely and failing to
+          generalize to new data (overfitting) can be combatted by randomly
+          removing some units during the learning phase (dropout). This prevents
+          over-reliance on any one unit in the network.
+        </li>
+        <li>
+          While the concept of neural networks can be complex, TensorFlow and
+          other python libraries make neural network implementation simple.
+        </li>
+      </ul>
     </div>
 
     <!-- Contact -->
-	<footer id="contact">
-		<div class="container units-row">
-            <div class="unit-50">
-                <p>Khail Alibhai - Updated April 2022</p>
-            </div>
-            <div class="unit-50">
-                <ul class="social list-flat right">
-                    <li><a href="mailto:kalibhai@sfu.ca"><i class="fa fa-envelope"></i></a></li>
-                    <li><a href="https://github.com/khail13"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/khail-alibhai/"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-			</div>
-		</div>
-	</footer>
-</body>
+    <footer id="contact">
+      <div class="container units-row">
+        <div class="unit-50">
+          <p>Khail Alibhai - Updated April 2022</p>
+        </div>
+        <div class="unit-50">
+          <ul class="social list-flat right">
+            <li>
+              <a href="mailto:kalibhai@sfu.ca"
+                ><i class="fa fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/khail13"
+                ><i class="fa fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/khail-alibhai/"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
